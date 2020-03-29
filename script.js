@@ -8,13 +8,14 @@ function carregar(){
    var firstData = document.getElementsByTagName('h1')[0]
 
    var data = new Date()
-   var hora = data.getHours()
+   //var hora = data.getHours()
    var minutos = data.getMinutes()
    var segundos = data.getSeconds()
    var dia = data.getDate()
    var mes = data.getMonth()
    var ano = data.getFullYear()
   
+   var hora = 22
 
    firstData.innerHTML = ` ${dia} de ${mes} de ${ano}`
 
@@ -60,24 +61,24 @@ function carregar(){
 
    if (hora >= 00 && hora < 12){
         //BOM DIA
-        img.src = "manha.png";
-        fundo.src = "fundomanha.jpg"
+        img.src = "images/manha.png";
+        fundo.src = "images/fundomanha.jpg"
         bigHora.innerHTML = `${hora}:${minutos}`
         msg.innerHTML = 'Bom dia'
 
         
    }else if(hora >= 12 && hora <= 18){
         //BOA TARDE
-        img.src = 'tarde.png'
-        fundo.src = "fundotarde.jpg"
+        img.src = 'images/tarde.png'
+        fundo.src = "images/fundotarde.jpg"
         bigHora.innerHTML = `${hora}:${minutos}`
         msg.innerHTML = 'Boa Tarde'
         
 
    }else{
        //BOA NOITE
-        img.src = 'noite.png'
-        fundo.src = "fundonoite.jpg"
+        img.src = 'images/noite.png'
+        fundo.src = "images/fundonoite.jpg"
         bigHora.innerHTML = `${hora}:${minutos}`
         msg.innerHTML = 'Boa Noite'
         
